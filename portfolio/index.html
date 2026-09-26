@@ -42,6 +42,7 @@ h1,h2,h3{text-wrap:balance;line-height:1.4;margin:0;font-family:var(--serif);fon
 .namecard{position:relative;overflow:hidden;background:var(--paper);border-radius:10px;box-shadow:var(--shadow);padding:44px 48px 40px;container-type:inline-size}
 .namecard .circuit{position:absolute;right:0;top:0;height:100%;width:auto;max-width:34%}
 .namecard .univ{font-family:var(--serif);font-weight:700;font-size:20px;letter-spacing:.08em}
+.nw{white-space:nowrap}
 .namecard .dept{color:var(--muted);font-size:15px;margin-top:2px}
 .hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(40px,7vw,68px);letter-spacing:.32em;margin-top:30px;margin-left:.1em}
 .ro{font-family:var(--mono);font-size:14px;letter-spacing:.24em;color:var(--maroon);margin-top:2px}
@@ -145,7 +146,7 @@ footer{margin-top:88px;padding-block:36px 48px}
 
 @media (max-width:860px){
   .hero{padding-block:32px 36px}
-  .namecard{padding:30px 22px 28px}.namecard .circuit{height:150px;opacity:.5}
+  .namecard{padding:30px 22px 28px}.namecard .circuit{height:92px;max-width:none}.namecard .univ,.namecard .dept{padding-right:78px}.namecard .univ{font-size:18px;letter-spacing:.04em}.namecard .sep{display:none}.namecard .lab-nm{display:block}.ro{font-size:12px;letter-spacing:.14em}
   .rule{max-width:100%}
   .index{grid-template-columns:1fr 1fr}.index a{border-bottom:1px solid var(--line)}.index a:nth-child(2n){border-right:0}
   .research{grid-template-columns:1fr}.road{min-height:200px;border-right:0;border-bottom:1px solid var(--line)}.research .txt{padding:26px 22px 30px}
@@ -162,7 +163,7 @@ footer{margin-top:88px;padding-block:36px 48px}
   <div class="namecard">
     <svg class="circuit" viewBox="0 0 190 236" fill="none" aria-hidden="true"><g stroke="var(--maroon)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M190 30 H150 L134 46 H96"/><path d="M190 66 H160 L144 82 H118 L106 94 H70"/><path d="M190 118 H128 L114 132 H52"/><path d="M190 158 H150 L136 172 H92"/><path d="M160 0 V14 L150 24"/></g><g stroke="var(--blue)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M190 190 H144 L130 204 H108"/><path d="M76 132 V178 L90 192 V210"/></g><g fill="var(--paper)" stroke="var(--maroon)" stroke-width="1.6"><circle cx="92" cy="46" r="4"/><circle cx="66" cy="94" r="4"/><circle cx="88" cy="172" r="4"/></g><g fill="var(--blue)"><circle cx="104" cy="204" r="3.5"/><circle cx="52" cy="132" r="3.5"/><circle cx="150" cy="24" r="3.5"/></g></svg>
     <div class="univ">神戸情報大学院大学</div>
-    <div class="dept">情報技術研究科 情報システム専攻 ／ 伊藤守研究室（伊藤ゼミ）</div>
+    <div class="dept"><span class="nw">情報技術研究科</span> <span class="nw">情報システム専攻</span><span class="sep"> ／ </span><span class="nw lab-nm">伊藤守研究室（伊藤ゼミ）</span></div>
     <h1>加來真一</h1>
     <div class="ro">KAKU Shinichi · Portfolio 2026</div>
     <hr class="rule">
@@ -250,7 +251,7 @@ footer{margin-top:88px;padding-block:36px 48px}
       <ul class="pts">
         <li>日本語・英語の両面をめくって表示</li>
         <li>vCardを生成して「連絡先に追加」</li>
-        <li>GitHubへのQRコードと、メール・電話のコピーボタン</li>
+        <li>ポートフォリオへのQRコードとリンク、メールのコピーボタン</li>
       </ul>
       <div class="chips"><span class="chip">バイブコーディング</span><span class="chip">Claude</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">vCard</span><span class="chip">GitHub Pages</span></div>
       <div class="links">
