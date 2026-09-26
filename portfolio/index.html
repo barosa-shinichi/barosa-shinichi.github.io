@@ -72,6 +72,12 @@ section{padding-block:72px 16px}
 .research h3{font-size:clamp(24px,3vw,32px);margin:14px 0 14px}
 .research p{margin:0 0 12px;color:var(--ink)}
 
+.rs-sub{font-family:var(--serif);font-weight:700;color:var(--maroon);margin:-6px 0 14px!important}
+.rs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:32px}
+.rs-grid h4{font-family:var(--serif);font-size:17px;margin:0 0 8px;padding-top:12px;border-top:1.5px solid var(--maroon)}
+.rs-grid p{margin:0;font-size:14.5px;line-height:1.8;color:var(--muted)}
+@media (max-width:860px){.rs-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.rs-grid{grid-template-columns:1fr;gap:20px}}
 .lab{display:grid;grid-template-columns:1fr 1.6fr;gap:40px;margin-top:28px;padding:28px 4px 8px;border-top:1px solid var(--line)}
 .lab h3{font-size:22px;margin-top:6px}
 .prof{margin-top:6px;font-weight:500}
@@ -167,7 +173,7 @@ footer{margin-top:88px;padding-block:36px 48px}
     <h1>加來真一</h1>
     <div class="ro">KAKU Shinichi · Portfolio 2026</div>
     <hr class="rule">
-    <p class="lead">社会人学生として修士課程に在籍し、道路の舗装状態を解析するアプリを研究しています。あわせて、企業のホームページ制作への協力や、家族で遊べるゲームアプリの開発・公開にも取り組んでいます。使う人の目線で考え、作って、確かめるところまで一貫してやり切ることを大切にしています。</p>
+    <p class="lead">民間企業で約10年、情報システムの開発・運用に携わり、現在は行政機関で情報システムの整備・管理・調達を担当しています。働きながら神戸情報大学院大学の修士課程に在籍し、道路の舗装状態を解析するアプリを研究しています。システム開発では、使う人の目線で考えて作り、検証まで一貫してやり切ることを大切にしています。</p>
   </div>
   <nav class="index" aria-label="掲載内容">
     <a href="#research"><span class="c">研究</span><span class="t">道路の舗装状態解析アプリ</span><span class="st wip">研究中</span></a>
@@ -194,11 +200,18 @@ footer{margin-top:88px;padding-block:36px 48px}
       <g fill="var(--paper)" stroke="var(--maroon)" stroke-width="1.6"><circle cx="180" cy="50" r="4"/><circle cx="376" cy="130" r="4"/></g>
     </svg></div>
     <div class="txt">
-      <span class="st wip">非公開・研究中</span>
+      <span class="st wip">研究中・仮説検証の段階</span>
       <h3>道路の舗装状態解析アプリ</h3>
-      <p>修士課程のメインテーマとして、道路の舗装の状態を解析するアプリを研究・開発しています。</p>
-      <p>成果は公開できる段階になりしだい、ここに掲載します。</p>
+      <p class="rs-sub">ドライブレコーダー映像による舗装状態分析と補修計画支援</p>
+      <p>ドライブレコーダーの映像から道路の舗装状態を分析し、道路管理者が補修計画を立てるのを支援する仕組みを研究しています。</p>
+      <p>いまは仮説を立て、道路管理の現場へのインタビューと既存サービスとの比較で、その仮説を確かめている段階です。</p>
     </div>
+  </div>
+  <div class="rs-grid">
+    <div><h4>問題意識</h4><p>市町村の道路維持担当は、損傷の状況を客観的・継続的に把握しにくい。そのため補修の優先順位を数字で説明できず、通報を受けてから直す「事後対応」から抜け出しにくいと考えています。</p></div>
+    <div><h4>目指す姿</h4><p>手持ちのドライブレコーダー映像を入れるだけで、舗装点検要領に沿った損傷区分と、補修の優先順位の案が得られる。担当者が根拠を示して、補修計画や予算要求を作れるようにします。</p></div>
+    <div><h4>使う技術</h4><p>ブラウザ上で動く画像認識、映像からの車速・距離の推定、国土交通省の舗装点検要領にもとづく判定区分。</p></div>
+    <div><h4>進め方</h4><p>道路管理の現場へのインタビューで、本当の課題が「説明責任」「経年データの不足」「技術人材の不足」のどれにあるかを確かめ、既存サービスとの機能比較で独自性を見極めます。</p></div>
   </div>
   <div class="lab">
     <div class="lab-head">
