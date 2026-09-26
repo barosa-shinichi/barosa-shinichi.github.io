@@ -54,7 +54,7 @@ body{background:var(--ground);color:var(--ink);font-family:'Zen Kaku Gothic New'
 .gh img{width:calc(var(--u)*62);height:calc(var(--u)*62);display:block}
 .pf{font-size:calc(var(--u)*12.5);line-height:1.5}.pfl{font-size:calc(var(--u)*15);color:var(--maroon)}
 
-.flip{align-self:center;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:13px;padding:9px 16px;border-radius:999px;cursor:pointer}
+.flip{text-decoration:none;align-self:center;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:13px;padding:9px 16px;border-radius:999px;cursor:pointer}
 .flip:hover{background:var(--btn)}
 .flip svg{width:16px;height:16px}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
@@ -133,6 +133,7 @@ body{background:var(--ground);color:var(--ink);font-family:'Zen Kaku Gothic New'
 
   <div class="share">
     <button class="flip" type="button" id="vcard">連絡先に追加</button>
+    <a class="flip" href="portfolio/">ポートフォリオを見る</a>
   </div>
 
   <section class="panel" aria-labelledby="c-h">
