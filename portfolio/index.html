@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="加來真一（神戸情報大学院大学 情報システム専攻）のポートフォリオ">
 <meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="加來真一 ポートフォリオ">
+<meta property="og:description" content="神戸情報大学院大学 情報システム専攻。道路の舗装状態解析アプリの研究と、これまでの制作実績・経歴。">
+<meta property="og:url" content="https://barosa-shinichi.github.io/portfolio/">
+<meta property="og:image" content="https://barosa-shinichi.github.io/portfolio/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>加來真一 ポートフォリオ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +33,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--mark);outline-offse
 h1,h2,h3{text-wrap:balance;line-height:1.4;margin:0;font-family:var(--serif);font-weight:700}
 .label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 /* centerline divider: road marking */
+.thin{border:0;border-top:1px solid var(--line);margin:64px 0 0}
 .lane{height:0;border-top:1.5px solid var(--maroon);position:relative}
 .lane::after{content:"";position:absolute;right:max(20px,calc(50% - 520px));top:-5.5px;width:8px;height:8px;border-radius:50%;background:var(--bg);border:1.5px solid var(--maroon)}
 
@@ -38,6 +45,8 @@ h1,h2,h3{text-wrap:balance;line-height:1.4;margin:0;font-family:var(--serif);fon
 .namecard .dept{color:var(--muted);font-size:15px;margin-top:2px}
 .hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(40px,7vw,68px);letter-spacing:.32em;margin-top:30px;margin-left:.1em}
 .ro{font-family:var(--mono);font-size:14px;letter-spacing:.24em;color:var(--maroon);margin-top:2px}
+.award{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:5px 14px;border:1.5px solid var(--maroon);border-radius:999px;color:var(--maroon);font-weight:700;font-size:13.5px;position:relative}
+.award span{font-weight:500;font-size:12px;padding-left:10px;border-left:1px solid var(--maroon)}
 .rule{border:0;border-top:1.5px solid var(--maroon);margin:26px 0 20px;max-width:66%}
 .lead{margin:0;font-size:16.5px;max-width:34em;position:relative}
 .index{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line)}
@@ -117,7 +126,7 @@ ul.pts li::before{content:"";position:absolute;left:1px;top:.62em;width:7px;heig
 .ai-grid p{margin:0;font-size:15px;color:var(--muted)}
 @media (max-width:860px){.ai-grid{grid-template-columns:1fr;gap:20px}}
 /* skills */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:28px}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:32px 28px}
 .skills h3{font-size:17px;margin-bottom:10px;padding-bottom:8px;border-bottom:1.5px solid var(--maroon)}
 .skills ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:15px}
 .skills small{display:block;color:var(--muted);font-size:12.5px;line-height:1.5}
@@ -126,6 +135,7 @@ ul.pts li::before{content:"";position:absolute;left:1px;top:.62em;width:7px;heig
 .tl{display:grid;gap:0}
 .tl div{display:grid;grid-template-columns:7.5em 1fr;gap:16px;padding-block:12px;border-bottom:1px solid var(--line)}
 .tl .now{display:block;text-align:right;color:var(--muted);border-bottom:0}
+.tl .desc{display:block;color:var(--muted);font-size:14px;line-height:1.75;margin-top:4px;max-width:44em}
 .tl time{font-family:var(--mono);font-size:13.5px;font-weight:500;color:var(--maroon);font-variant-numeric:tabular-nums}
 
 footer{margin-top:88px;padding-block:36px 48px}
@@ -156,18 +166,18 @@ footer{margin-top:88px;padding-block:36px 48px}
     <h1>加來真一</h1>
     <div class="ro">KAKU Shinichi · Portfolio 2026</div>
     <hr class="rule">
-    <p class="lead">社会人学生として修士課程に在籍し、道路の舗装状態を解析するアプリを研究しています。あわせて、企業のホームページ制作や、家族で遊べるゲームアプリの開発・公開にも取り組んでいます。使う人の目線で考え、作って、確かめるところまでをひとりでやり切ることを大切にしています。</p>
+    <p class="lead">社会人学生として修士課程に在籍し、道路の舗装状態を解析するアプリを研究しています。あわせて、企業のホームページ制作への協力や、家族で遊べるゲームアプリの開発・公開にも取り組んでいます。使う人の目線で考え、作って、確かめるところまで一貫してやり切ることを大切にしています。</p>
   </div>
   <nav class="index" aria-label="掲載内容">
     <a href="#research"><span class="c">研究</span><span class="t">道路の舗装状態解析アプリ</span><span class="st wip">研究中</span></a>
     <a href="#card"><span class="c">Web</span><span class="t">デジタル名刺</span><span class="st">公開中</span></a>
-    <a href="#housing"><span class="c">受託制作</span><span class="t">ハウジング・ウィズ ホームページ</span><span class="st">公開中</span></a>
+    <a href="#housing"><span class="c">制作協力</span><span class="t">ハウジング・ウィズ ホームページ</span><span class="st">公開中</span></a>
     <a href="#othello"><span class="c">アプリ</span><span class="t">かぞくオセロ</span><span class="st">公開中</span></a>
     <a href="#chess"><span class="c">アプリ</span><span class="t">3Dちぇす</span><span class="st">公開中</span></a>
   </nav>
 </header>
 </div>
-<div class="lane" aria-hidden="true"></div>
+<div class="wrap"><div class="lane" aria-hidden="true"></div></div>
 <div class="wrap">
 
 <section id="research">
@@ -208,6 +218,7 @@ footer{margin-top:88px;padding-block:36px 48px}
   </div>
 </section>
 
+<hr class="thin" aria-hidden="true">
 <section id="style">
   <div class="sec-head"><h2>バイブコーディングとAI活用</h2><span class="label">How I Build</span></div>
   <div class="ai">
@@ -255,7 +266,7 @@ footer{margin-top:88px;padding-block:36px 48px}
       <ul><li>不動産売却</li><li>私たちの強み</li><li>お客様の声</li><li>ブログ</li><li>会社概要</li><li>売却のご相談</li></ul></div>
     </div></div>
     <div>
-      <div class="label">受託制作 · Web</div>
+      <div class="label">制作協力 · Web</div>
       <h3>株式会社ハウジング・ウィズ ホームページ</h3>
       <div class="sub">東京・新宿の不動産売却会社のコーポレートサイト</div>
       <div class="meta"><span>制作 <b>2026.09</b></span><span>種別 <b>企業サイト</b></span><span>業種 <b>不動産売却</b></span></div>
@@ -322,9 +333,22 @@ footer{margin-top:88px;padding-block:36px 48px}
 
 </section>
 
+<div class="lane" aria-hidden="true" style="margin-top:64px"></div>
 <section>
   <div class="sec-head"><h2>技術スタック</h2><span class="label">Skills</span></div>
   <div class="skills">
+    <div><h3>プロジェクトマネジメント</h3><ul>
+      <li>アジャイル／ウォーターフォール<small>注文アプリ・Web開発のPM</small></li>
+      <li>要件定義・社内調整</li>
+      <li>ベンダー選定・管理</li>
+      <li>予算・工数管理</li>
+    </ul></div>
+    <div><h3>情報システム運用</h3><ul>
+      <li>情報システムの調達・資産管理</li>
+      <li>ヘルプデスク運営<small>Zendesk 導入・品質管理</small></li>
+      <li>Oracle SQL<small>データ抽出・更新（8年）</small></li>
+      <li>サーバー・ストレージ保守</li>
+    </ul></div>
     <div><h3>AI活用</h3><ul>
       <li>バイブコーディング<small>AIとのペアプログラミング</small></li>
       <li>要件定義・設計をAIに伝える力<small>アプリ・名刺</small></li>
@@ -358,25 +382,25 @@ footer{margin-top:88px;padding-block:36px 48px}
   </div>
 </section>
 
+<div class="lane" aria-hidden="true" style="margin-top:64px"></div>
 <section>
   <div class="sec-head"><h2>経歴</h2><span class="label">Career</span></div>
   <div class="tl">
     <div><time>2012年4月</time><span>金沢工業大学 工学部 情報工学科 入学</span></div>
     <div><time>2013年8月</time><span>レスキューロボットコンテスト 優勝（レスキュー工学大賞）</span></div>
-    <div><time>2015年3月</time><span>Emerio an NTT Communications（マレーシア法人）入社</span></div>
-    <div><time>2017年1月</time><span>パルシステム生活協同組合連合会 入職</span></div>
-    <div><time>2025年1月</time><span>国立研究開発法人 国立がん研究センター 入職</span></div>
-    <div><time>2026年1月</time><span>国土交通省 関東地方整備局 入省</span></div>
+    <div><time>2015年2月</time><span>金沢工業大学 工学部 情報工学科 中退</span></div>
+    <div><time>2015年3月</time><span>Emerio an NTT Communications（マレーシア法人）入社<small class="desc">NTTコミュニケーションズグループのITヘルプデスクを担当。のちにサービスエンジニアとして、データセンターのサーバー・ストレージの構築と保守に従事。</small></span></div>
+    <div><time>2017年1月</time><span>パルシステム生活協同組合連合会 入職<small class="desc">情報システム本部で8年間、社内SEとして勤務。組合員150万人が使う注文アプリの開発PM、Zendesk導入によるヘルプデスク改善、配送端末のリプレイスを担当。</small></span></div>
+    <div><time>2025年1月</time><span>国立研究開発法人 国立がん研究センター 入職<small class="desc">情報統括センターのシステム支援係長として、情報システムの評価・調達・運用を支援。院内DXでは帳票の電子化を進め、医療現場の負担軽減に貢献。</small></span></div>
+    <div><time>2026年1月</time><span>国土交通省 関東地方整備局 入省<small class="desc">河川国道事務所の高度情報係長として、情報システムの整備・管理と調達を担当。道路や河川を守る現場に身を置きながら、そのデジタル化に携わっている。</small></span></div>
     <div><time>2026年4月</time><span>神戸情報大学院大学 情報技術研究科 情報システム専攻 入学（伊藤守研究室）</span></div>
-    <div><time>2026年9月</time><span>株式会社ハウジング・ウィズ ホームページ制作</span></div>
-    <div><time>2026年9月</time><span>「かぞくオセロ」「3Dちぇす」「デジタル名刺」を公開</span></div>
     <div class="now"><span>現在に至る</span></div>
   </div>
 </section>
 </div>
 
 <footer>
-  <div class="lane" aria-hidden="true"></div>
+  <div class="wrap"><div class="lane" aria-hidden="true"></div></div>
   <div class="wrap" style="padding-top:36px">
     <div class="label">Contact</div>
     <div class="contact">
