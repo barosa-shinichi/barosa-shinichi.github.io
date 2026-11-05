@@ -389,8 +389,8 @@ footer{margin-top:88px;padding-block:36px 48px}
   </div>
 </section>
 
-<div class="lane" aria-hidden="true" style="margin-top:64px"></div>
-<section>
+<div class="lane" id="career-lane" aria-hidden="true" style="margin-top:64px"></div>
+<section id="career">
   <div class="sec-head"><h2>経歴</h2><span class="label">Career</span></div>
   <div class="tl">
     <div><time>2012年4月</time><span>金沢工業大学 工学部 情報工学科 入学</span></div>
@@ -419,6 +419,17 @@ footer{margin-top:88px;padding-block:36px 48px}
   </div>
 </footer>
 
+<script>
+/* 経歴の表示は portfolio/config.json の "showCareer" で切り替える（リポジトリの管理者のみ編集可能） */
+(function(){
+  var sec=document.getElementById('career'),lane=document.getElementById('career-lane');
+  function set(on){sec.hidden=!on;lane.hidden=!on;}
+  set(false);
+  fetch('config.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();})
+    .then(function(c){set(c.showCareer!==false);})
+    .catch(function(){set(location.protocol==='file:');});
+})();
+</script>
 <script>
 document.getElementById('copy').addEventListener('click',function(){var t=document.getElementById('mail').textContent,btn=this;
   function ok(){btn.textContent='コピーしました';setTimeout(function(){btn.textContent='コピー';},1600);}
