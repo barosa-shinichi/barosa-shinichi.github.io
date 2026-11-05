@@ -393,12 +393,12 @@ footer{margin-top:88px;padding-block:36px 48px}
 <section id="career">
   <div class="sec-head"><h2>経歴</h2><span class="label">Career</span></div>
   <div class="tl">
-    <div><time>2012年4月</time><span>金沢工業大学 工学部 情報工学科 入学</span></div>
-    <div><time>2013年8月</time><span>レスキューロボットコンテスト 優勝（レスキュー工学大賞）</span></div>
-    <div><time>2015年2月</time><span>金沢工業大学 工学部 情報工学科 中退</span></div>
-    <div><time>2015年3月</time><span>Emerio an NTT Communications（マレーシア法人）入社<small class="desc">NTTコミュニケーションズグループのITヘルプデスクを担当。のちにサービスエンジニアとして、データセンターのサーバー・ストレージの構築と保守に従事。</small></span></div>
-    <div><time>2017年1月</time><span>パルシステム生活協同組合連合会 入職<small class="desc">情報システム本部で8年間、社内SEとして勤務。組合員150万人が使う注文アプリの開発PM、Zendesk導入によるヘルプデスク改善、配送端末のリプレイスを担当。</small></span></div>
-    <div><time>2025年1月</time><span>国立研究開発法人 国立がん研究センター 入職<small class="desc">情報統括センターのシステム支援係長として、情報システムの評価・調達・運用を支援。院内DXでは帳票の電子化を進め、医療現場の負担軽減に貢献。</small></span></div>
+    <div class="past"><time>2012年4月</time><span>金沢工業大学 工学部 情報工学科 入学</span></div>
+    <div class="past"><time>2013年8月</time><span>レスキューロボットコンテスト 優勝（レスキュー工学大賞）</span></div>
+    <div class="past"><time>2015年2月</time><span>金沢工業大学 工学部 情報工学科 中退</span></div>
+    <div class="past"><time>2015年3月</time><span>Emerio an NTT Communications（マレーシア法人）入社<small class="desc">NTTコミュニケーションズグループのITヘルプデスクを担当。のちにサービスエンジニアとして、データセンターのサーバー・ストレージの構築と保守に従事。</small></span></div>
+    <div class="past"><time>2017年1月</time><span>パルシステム生活協同組合連合会 入職<small class="desc">情報システム本部で8年間、社内SEとして勤務。組合員150万人が使う注文アプリの開発PM、Zendesk導入によるヘルプデスク改善、配送端末のリプレイスを担当。</small></span></div>
+    <div class="past"><time>2025年1月</time><span>国立研究開発法人 国立がん研究センター 入職<small class="desc">情報統括センターのシステム支援係長として、情報システムの評価・調達・運用を支援。院内DXでは帳票の電子化を進め、医療現場の負担軽減に貢献。</small></span></div>
     <div><time>2026年1月</time><span>国土交通省 関東地方整備局 入省<small class="desc">河川国道事務所の高度情報係長として、情報システムの整備・管理と調達を担当。道路や河川を守る現場に身を置きながら、そのデジタル化に携わっている。</small></span></div>
     <div><time>2026年4月</time><span>神戸情報大学院大学 情報技術研究科 情報システム専攻 入学（伊藤守研究室）</span></div>
     <div class="now"><span>現在に至る</span></div>
@@ -420,13 +420,13 @@ footer{margin-top:88px;padding-block:36px 48px}
 </footer>
 
 <script>
-/* 経歴の表示は portfolio/config.json の "showCareer" で切り替える（リポジトリの管理者のみ編集可能） */
+/* 関東地方整備局より前の経歴の表示は portfolio/config.json の "showPastCareer" で切り替える（リポジトリの管理者のみ編集可能） */
 (function(){
-  var sec=document.getElementById('career'),lane=document.getElementById('career-lane');
-  function set(on){sec.hidden=!on;lane.hidden=!on;}
+  var past=document.querySelectorAll('#career .past');
+  function set(on){for(var i=0;i<past.length;i++)past[i].hidden=!on;}
   set(false);
   fetch('config.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();})
-    .then(function(c){set(c.showCareer!==false);})
+    .then(function(c){set(c.showPastCareer===true);})
     .catch(function(){set(location.protocol==='file:');});
 })();
 </script>
